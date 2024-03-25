@@ -1,0 +1,11 @@
+function myFun()
+{
+	return [10,20,30,40,50];
+}
+
+//Calling the Function 
+const myArray =  myFun();
+const firstElement = myArray[0];
+const secondElement = myArray[1];
+
+console.log(firstElement,secondElement)

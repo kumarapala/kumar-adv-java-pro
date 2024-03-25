@@ -1,0 +1,17 @@
+package com.springex;
+
+public class TyresFactory {
+	public Speaker getSpeaker(String speakerType)
+	{
+		if(speakerType==null)
+			return null;
+		if (speakerType.equalsIgnoreCase("SONY"))
+			return new SonySpeakers();
+		else if (speakerType.equalsIgnoreCase("BOSS")) {
+			return new BoseSpeaker();
+		}
+		else
+		{	return null; 
+		}	
+	}
+}

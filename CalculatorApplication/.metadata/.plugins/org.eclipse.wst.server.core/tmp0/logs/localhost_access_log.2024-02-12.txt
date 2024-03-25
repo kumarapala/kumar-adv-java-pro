@@ -1,0 +1,11 @@
+127.0.0.1 - - [12/Feb/2024:17:05:50 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [12/Feb/2024:17:05:50 +0530] "GET /RegistrationApplication/ HTTP/1.1" 404 779
+0:0:0:0:0:0:0:1 - - [12/Feb/2024:17:06:02 +0530] "GET /RegistrationApplication/register.html HTTP/1.1" 200 1701
+0:0:0:0:0:0:0:1 - - [12/Feb/2024:17:08:45 +0530] "GET /RegistrationApplication/RegisterServlet?username=Sai+Sangamam&password=Vineeth%40123&mobile=420420420&email=sai%40gmail.com&gender=on&dob=2024-02-06&qualification=on&qualification=on&country=Ameerpet&languages=Telugu&languages=Hindi&comments=%09Ratan+isr+Classes+nice+Ratan+sir+wowwwww+ooooooo+mmmmmmmm.... HTTP/1.1" 200 187
+0:0:0:0:0:0:0:1 - - [12/Feb/2024:17:10:56 +0530] "GET /RegistrationApplication/RegisterServlet?username=Sai+Sangamam&password=Vineeth%40123&mobile=420420420&email=sai%40gmail.com&gender=on&dob=2024-02-06&qualification=on&qualification=on&country=Ameerpet&languages=Telugu&languages=Hindi&comments=%09Ratan+isr+Classes+nice+Ratan+sir+wowwwww+ooooooo+mmmmmmmm.... HTTP/1.1" 200 187
+0:0:0:0:0:0:0:1 - - [12/Feb/2024:17:12:53 +0530] "GET /RegistrationApplication/ HTTP/1.1" 404 779
+127.0.0.1 - - [12/Feb/2024:17:13:32 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [12/Feb/2024:17:13:32 +0530] "GET /RegistrationApplication/ HTTP/1.1" 404 779
+0:0:0:0:0:0:0:1 - - [12/Feb/2024:17:13:43 +0530] "GET /RegistrationApplication/register.html HTTP/1.1" 200 1785
+0:0:0:0:0:0:0:1 - - [12/Feb/2024:17:14:16 +0530] "GET /RegistrationApplication/RegisterServlet?username=Sai+Sangamam&password=Vineeth%40123&mobile=420420420&email=sai%40gmail.com&gender=Male&dob=2024-02-13&qualification=BSC&qualification=BTECH&qualification=MTech&country=Ameerpet&languages=Telugu&languages=Hindi&languages=Kanada&languages=tamil&comments=%09sdfhksjdfsdkf HTTP/1.1" 200 212
+0:0:0:0:0:0:0:1 - - [12/Feb/2024:17:22:23 +0530] "GET /RegistrationApplication/RegisterServlet?username=Sai+Sangamam&password=Vineeth%40123&mobile=420420420&email=sai%40gmail.com&gender=Male&dob=2024-02-13&qualification=BSC&qualification=BTECH&qualification=MTech&country=Ameerpet&languages=Telugu&languages=Hindi&languages=Kanada&languages=tamil&comments=%09Ratan+sir+nice.... HTTP/1.1" 200 381

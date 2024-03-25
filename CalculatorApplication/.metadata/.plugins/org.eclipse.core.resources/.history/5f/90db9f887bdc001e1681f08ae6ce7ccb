@@ -1,0 +1,121 @@
+package com.sathya.productapp;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintWriter;
+import java.sql.Date;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
+
+import org.apache.commons.io.IOUtils;
+
+/**
+ * Servlet implementation class UpdateProductServlet
+ */
+@WebServlet("/UpdateProductServlet")
+@MultipartConfig
+public class UpdateProductServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public UpdateProductServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+		String proId = request.getParameter("proId");
+        String updatedProductName = request.getParameter("proName");
+        
+        double updatedProductPrice = Double.parseDouble(request.getParameter("proPrice"));
+        String updatedProductBrand = request.getParameter("proBrand");
+        
+        String updatedProductMadeIn = request.getParameter("proMadeIn");
+        Date updatedProductMfgDate = Date.valueOf(request.getParameter("proMfgDate"));
+        
+        Date updatedProductExpDate = Date.valueOf(request.getParameter("proExpDate"));
+      
+        
+        Product product = new Product();
+	     product.setProId(proId);
+	     product.setProName(updatedProductName);
+	     product.setProPrice(updatedProductPrice);
+	     product.setProBrand(updatedProductBrand);
+	     product.setProMadeIn(updatedProductMadeIn);
+	     product.setProMfgDate(updatedProductMfgDate);
+	     product.setProExpDate(updatedProductExpDate);
+	     
+
+	     Part newImagePart = request.getPart("newProImage");
+	        byte[] imageData;
+
+	        if (newImagePart != null && newImagePart.getSize() > 0) {
+	            // If a new image is uploaded, save it to a temporary file
+	            try (InputStream inputStream = newImagePart.getInputStream()) {
+	                // Define a temporary file path
+	                String tempFilePath = "D:/Advprograms/temp/tempImage.jpg"; // Change the path as needed
+
+	                // Save the uploaded file to the temporary file
+	                Files.copy(inputStream, Paths.get(tempFilePath), StandardCopyOption.REPLACE_EXISTING);
+
+	                // Read the content of the temporary file into a byte array
+	                imageData = Files.readAllBytes(Paths.get(tempFilePath));
+	            } finally {
+	                // Clean up the temporary file
+	                Files.deleteIfExists(Paths.get(tempFilePath));
+	            }
+	        } else {
+	            // If no new image is uploaded, read the existing image data
+	            Part existingImagePart = request.getPart("existingImage");
+	            try (InputStream inputStream = existingImagePart.getInputStream()) {
+	                // Read the content of the existing image into a byte array
+	                imageData = inputStream.readAllBytes();
+	            }
+	        }
+
+	        // Set the image data to your product object or perform other operations with it
+	        product.setProImage(imageData);		
+		
+		ProductDao dao = new ProductDao();
+		int result = dao.updateById(product);
+		
+		 if(result == 1)
+		    {  	//To send the data to JSP file add the data into request object 
+		    	//request.setAttribute("saveResult", result);
+		    	
+		    	RequestDispatcher dispatcher = request.getRequestDispatcher("productList.jsp");
+		    	dispatcher.forward(request, response);
+		    }
+		    else
+		    { 	response.setContentType("text/html");
+		    	PrintWriter writer = response.getWriter();
+		    	writer.println("Data Updation fail Check once..."+result);
+		    	RequestDispatcher dispatcher = request.getRequestDispatcher("add-product.html");
+		    	dispatcher.include(request, response);
+		    }
+		
+		
+	}
+
+}

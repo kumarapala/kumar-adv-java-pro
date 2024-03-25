@@ -1,0 +1,8 @@
+package com.springex;
+
+public class MichelinTyres {
+	public String rotate()
+	{
+		return "Michelin Tyres Rotating...";
+	}
+}

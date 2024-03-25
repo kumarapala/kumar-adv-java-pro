@@ -1,0 +1,11 @@
+package com.springex;
+
+public class Vehicle {
+	public void makeVehicle()
+	{
+		SonySpeakers sonySpeakers = new SonySpeakers();
+		System.out.println(sonySpeakers.makeSound());
+		
+		
+	}
+}

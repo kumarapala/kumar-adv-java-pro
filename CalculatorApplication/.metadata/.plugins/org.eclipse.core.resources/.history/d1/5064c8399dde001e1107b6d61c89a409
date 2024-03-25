@@ -1,0 +1,8 @@
+package com.springex;
+
+public class MichelinTyres {
+	public void rotate()
+	{
+		
+	}
+}

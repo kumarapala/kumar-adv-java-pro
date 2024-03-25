@@ -1,0 +1,21 @@
+package com.springex;
+
+public class Vehicle {
+	public void makeVehicle()
+	{
+		SonySpeakers sonySpeakers = new SonySpeakers();
+		System.out.println(sonySpeakers.makeSound());
+		
+		MichelinTyres michelinTyres = new MichelinTyres();
+		System.out.println(michelinTyres.rotate());
+	}
+	
+	public void makeVehicle2()
+	{
+		SpeakerFactory speakerFactory = new SpeakerFactory();
+		Speaker speaker = speakerFactory.getSpeaker("SONY");
+		speaker.makeSound();
+		
+		
+	}
+}

@@ -1,0 +1,78 @@
+<html>
+	<head> 
+		<title> Registration App...</title> 
+	</head> 
+	<body bgcolor = 'pink'> 
+		<h1> Registration Form.....</h1>
+	<form method = "get" action ="./RegisterServlet">
+		
+	<label> User Name:</label> 
+	<input type="text" name = "username" required/>
+	
+	<br><br>
+
+	<label> User Password:</label> 
+	<input type="password" name = "password" required/>
+		
+	<br><br>
+
+	<label> User Mobile</label> 
+	<input type = "number" name = "mobile" required/>
+
+	<br><br>
+
+	<label> User Email: </label> 
+	<input type = "email" name = "email" required/>
+
+	<br><br>
+
+	<label> Gender: </label> 
+	<input type="radio" name="gender" value="Male"/>MALE 
+	<input type="radio" name="gender" value="FEMALE"/>FEMALE
+	
+	<br><br>
+	
+	<label>Select DOB:</label> 
+	<input type ="date" name = "dob" required/>
+
+	<br><br>
+	
+	<label> Qualification: </label> 
+	<input type="checkbox" name="qualification" value="BSC"/>BSC 	
+	<input type="checkbox" name="qualification" value="MCA"/>MCA 
+	<input type="checkbox" name="qualification" value="BTECH"/>BTECH
+	<input type="checkbox" name="qualification" value="MTech"/>MTech
+	
+	<br><br>
+	
+	<label>Country: </label> 
+	<select name="country">
+		<option>INDIA</option>
+		<option>China</option>
+		<option>Ameerpet</option>
+		<option>Africa</option>
+	</select>
+	
+	<br><br>
+
+	<label>Select Languages:</label> 
+	<select name="languages"  size ='3' multiple>
+		<option>Telugu</option>
+		<option>Hindi</option>
+		<option>Kanada</option>
+		<option>tamil</option>
+		<option>english</option>
+	</select>
+		
+	<br><br>
+
+	<label>Comments About Ratan sir: </label>
+	<textarea name="comments" rows="5" cols="25">
+	</textarea>
+	<br><br>
+
+	<input type ="submit" value = "Register"/>
+
+	</form>
+	</body>
+</html>

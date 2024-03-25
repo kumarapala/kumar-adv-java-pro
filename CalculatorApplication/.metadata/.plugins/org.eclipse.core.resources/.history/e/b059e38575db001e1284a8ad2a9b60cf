@@ -1,0 +1,54 @@
+package com.sathya.jdbcex;
+
+public class DataBaseClient {
+	public static void main(String[] args) {
+		  EmployeeDao employeeDao = new EmployeeDao();
+		
+//		  int res1 = employeeDao.save(new Employee(1001, "sathosh",116));
+//		  if(res1==1) {
+//			  System.out.println("Data inserted Successfully...");
+//		  }
+//		  else
+//		  {  System.out.println("Data insertion fail....");
+//		  }
+//		  
+//		  int res2 = employeeDao.save(new Employee(1002,"Hemanth", 118));
+//		  if(res2==1) {
+//			  System.out.println("Data inserted Successfully...");
+//		  }
+//		  else
+//		  {  System.out.println("Data insertion fail....");
+//		  }	
+//		
+		//Reading the data from Database 
+		/*
+		 * Employee emp = employeeDao.findById(1003); System.out.println(emp);
+		 */
+		  	
+		/*
+		 * int deleteCount = employeeDao.deleteById(1009); if(deleteCount==1) {
+		 * System.out.println("Data deleted Successfully...."); } else {
+		 * System.out.println("Data deleteion fail"); }
+		 */
+		
+		//int deleteCount = employeeDao.deleteBySalary(25000);
+		//System.out.println("Deleted records count...."+deleteCount);
+		  
+	//Reading All records 
+//		  List<Employee> emps=employeeDao.findAll();
+//		  emps.forEach(emp->System.out.println(emp)); 
+		  
+		  int updateCount = employeeDao.updateBySalary( 10000 , 100);
+		  System.out.println(updateCount + " rows updated.");
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+	}
+}

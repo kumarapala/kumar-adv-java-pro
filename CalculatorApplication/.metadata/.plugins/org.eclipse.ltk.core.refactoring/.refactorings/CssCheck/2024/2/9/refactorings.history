@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;CssCheck/src/main/webapp/firstscript.js&apos; to &apos;myscript.js&apos;" description="Rename resource &apos;firstscript.js&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/firstscript.js" name="myscript.js" stamp="1709033141852" updateReferences="true"/>
+</session>

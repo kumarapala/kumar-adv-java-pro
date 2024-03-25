@@ -1,0 +1,8 @@
+package com.springex;
+
+public interface Tyres {
+	public void rotate()
+	{
+		
+	}
+}

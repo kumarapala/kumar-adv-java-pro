@@ -1,0 +1,25 @@
+package com.sathya.jdbcex;
+
+import java.sql.SQLException;
+import java.util.List;
+
+public class ProcedureExecutionEx {
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {	
+		List<String> names = List.of("ratan","sathya","sravya","siva");
+		//names.forEach(name->System.out.println(name));
+		
+		names.stream()
+			 .filter(name->name.startsWith("s"))
+			 .map(name->name+"tech")
+			 .forEach(name->System.out.println(name));
+		
+	
+	}
+}
+
+
+
+
+
+
+

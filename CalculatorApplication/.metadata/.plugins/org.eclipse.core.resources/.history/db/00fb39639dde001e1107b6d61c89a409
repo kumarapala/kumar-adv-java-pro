@@ -1,0 +1,7 @@
+package com.springex;
+
+public class SonySpeakers implements Speaker {
+	public String makeSound()
+	{	return "sony music";	
+	}
+}
